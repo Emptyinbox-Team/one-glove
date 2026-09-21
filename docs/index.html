@@ -53,7 +53,7 @@ input#note{font:inherit;width:100%;max-width:520px;padding:9px 10px;border:1px s
 <header>
   <h1>One Glove: five brand directions</h1>
   <p>Same app, same name, warmer heart. Each direction below is a full identity: mark, palette, type pairing and the line we'd put on the poster. Pick the one you'd be proud to wear on a beanie, then leave a note. You can change your vote any time; the tally updates live for everyone.</p>
-  <div class="status"><span>Voting happens on the live ballot linked in the README; this page is the read-only gallery.</span></div>
+  <div class="status" id="status"><span>Votes so far: <b id="total">0</b></span><span id="who">Loading the tally…</span></div>
 </header>
 
 <section class="opts" id="opts">
@@ -79,7 +79,8 @@ input#note{font:inherit;width:100%;max-width:520px;padding:9px 10px;border:1px s
     <p class="line" style="font-family:'Righteous',sans-serif;color:#E4432B">One glove. One love. Come back together.</p>
     <div class="sw"><i style="background:#F5B400"></i><i style="background:#E4432B"></i><i style="background:#1E8A4C"></i><i style="background:#FFF6E0"></i><i style="background:#1B1A17"></i></div>
     <dl class="meta"><dt>Type</dt><dd>Righteous for display, Nunito for everything else</dd><dt>Voice</dt><dd>Warm, plain, a little sung. "Your glove's been waiting."</dd><dt>Icon</dt><dd>Red sun, cream glove, gold rays. Reads at 29 px.</dd><dt>Risk</dt><dd>Red-gold-green carries cultural weight; wear it with respect, never with clichés.</dd></dl>
-    </div>
+    <div class="vote"><button class="v" data-vote="sunrise">Vote Sunrise Session</button><div class="bar"><i></i></div><span class="n">0 votes</span></div>
+  </div>
 </article>
 
 <!-- 2 TWO HANDS -->
@@ -101,7 +102,8 @@ input#note{font:inherit;width:100%;max-width:520px;padding:9px 10px;border:1px s
     <p class="line" style="font-family:'Caveat',cursive;font-weight:700;color:#0E8C86;font-size:30px">Every glove has a somebody.</p>
     <div class="sw"><i style="background:#FF6B57"></i><i style="background:#0E8C86"></i><i style="background:#F3E3C3"></i><i style="background:#4A2E23"></i><i style="background:#FFFFFF"></i></div>
     <dl class="meta"><dt>Type</dt><dd>Caveat (hand-written) for headlines, Quicksand for UI</dd><dt>Voice</dt><dd>Gentle, first-person, hopeful. Notifications feel like a neighbour knocking.</dd><dt>Icon</dt><dd>The heart-gap between the two mittens, coral on teal.</dd><dt>Risk</dt><dd>Least edgy. Could read as a kids' brand if the copy goes soft.</dd></dl>
-    </div>
+    <div class="vote"><button class="v" data-vote="twohands">Vote Two Hands</button><div class="bar"><i></i></div><span class="n">0 votes</span></div>
+  </div>
 </article>
 
 <!-- 3 KNIT TOGETHER -->
@@ -122,7 +124,8 @@ input#note{font:inherit;width:100%;max-width:520px;padding:9px 10px;border:1px s
     <p class="line" style="font-family:'Fredoka',sans-serif;font-weight:700;color:#9B2D4A">Lost, found, knit back together.</p>
     <div class="sw"><i style="background:#D9A21B"></i><i style="background:#9B2D4A"></i><i style="background:#EFE7D6"></i><i style="background:#2F4F3A"></i><i style="background:#2A2724"></i></div>
     <dl class="meta"><dt>Type</dt><dd>Fredoka (rounded, chunky) with Nunito body</dd><dt>Voice</dt><dd>Cosy and practical. Reunion cards look like a patch you earned.</dd><dt>Icon</dt><dd>Gold badge with stitched glove; works as a physical pin and a sticker.</dd><dt>Risk</dt><dd>Very winter. Southern-hemisphere summer users may feel it's not for them.</dd></dl>
-    </div>
+    <div class="vote"><button class="v" data-vote="knit">Vote Knit Together</button><div class="bar"><i></i></div><span class="n">0 votes</span></div>
+  </div>
 </article>
 
 <!-- 4 GOOD VIBRATIONS -->
@@ -145,7 +148,8 @@ input#note{font:inherit;width:100%;max-width:520px;padding:9px 10px;border:1px s
     <p class="line" style="font-family:'Bebas Neue',sans-serif;letter-spacing:.06em;color:#FFC42E;font-size:30px">Wave. Find. Reunite.</p>
     <div class="sw"><i style="background:#111111"></i><i style="background:#FFC42E"></i><i style="background:#E23A2E"></i><i style="background:#1EA45A"></i><i style="background:#FFF7E6"></i></div>
     <dl class="meta"><dt>Type</dt><dd>Bebas Neue display, Work Sans for body and UI</dd><dt>Voice</dt><dd>Short, rhythmic, upbeat. Three-word sentences. Big on sound and motion in-app.</dd><dt>Icon</dt><dd>Cream glove on black with the three rings; the most distinctive on a home screen.</dd><dt>Risk</dt><dd>Dark UI by default; the three-stripe palette must stay abstract, never costume.</dd></dl>
-    </div>
+    <div class="vote"><button class="v" data-vote="vibes">Vote Good Vibrations</button><div class="bar"><i></i></div><span class="n">0 votes</span></div>
+  </div>
 </article>
 
 <!-- 5 WARM BUREAU -->
@@ -167,14 +171,67 @@ input#note{font:inherit;width:100%;max-width:520px;padding:9px 10px;border:1px s
     <p class="line" style="font-family:'Special Elite',monospace;color:#D64530">Case closed. Hearts open.</p>
     <div class="sw"><i style="background:#C9A472"></i><i style="background:#FFD166"></i><i style="background:#D64530"></i><i style="background:#F6ECD8"></i><i style="background:#2A2118"></i></div>
     <dl class="meta"><dt>Type</dt><dd>Special Elite (typewriter) for headlines and stamps, Nunito for UI</dd><dt>Voice</dt><dd>Deadpan bureau on the poster, sincere on the reunion card. Both jokes land.</dd><dt>Icon</dt><dd>Kraft folder with the stamp; feels like a real object.</dd><dt>Risk</dt><dd>Least "One Love." Warm through props, not colour. The middle path may satisfy no one.</dd></dl>
-    </div>
+    <div class="vote"><button class="v" data-vote="bureau">Vote Warm Bureau</button><div class="bar"><i></i></div><span class="n">0 votes</span></div>
+  </div>
 </article>
 
 </section>
 
-
+<section class="results">
+  <h2>Live results</h2>
+  <ol id="rank"><li>No votes yet.</li></ol>
+  <label class="note" for="note">One line on why (optional, saved with your vote)<input id="note" maxlength="140" placeholder="e.g. Good Vibrations would look best on a lift-line poster"></label>
+  <div class="notes" id="notes"></div>
+  <p class="fine">Anyone with the link can vote. One vote per browser, and you can change it any time. Direction names, marks and lines are original to this project; nothing here uses any artist's name, likeness or lyrics.</p>
+</section>
 </div>
 
 
-
+<script>
+(function(){
+  var URL="https://ujzzrhpyuxwwzwbzawne.supabase.co", KEY="sb_publishable_PIiBYOuj5anNSu4YkFRxug_SSrjiSpS";
+  var IDS=["sunrise","twohands","knit","vibes","bureau"];
+  var NAMES={sunrise:"Sunrise Session",twohands:"Two Hands",knit:"Knit Together",vibes:"Good Vibrations",bureau:"Warm Bureau"};
+  var $=function(s,r){return (r||document).querySelector(s)};
+  var buttons=[].slice.call(document.querySelectorAll("button.v"));
+  var voter; try{ voter=localStorage.getItem("og_voter"); if(!voter){ voter=crypto.randomUUID(); localStorage.setItem("og_voter",voter);} }catch(e){ voter=crypto.randomUUID(); }
+  var mine=null, rows=[];
+  function H(){return {"apikey":KEY,"Authorization":"Bearer "+KEY,"Content-Type":"application/json"}}
+  function render(){
+    var counts={},total=0;IDS.forEach(function(i){counts[i]=0});
+    rows.forEach(function(v){if(counts.hasOwnProperty(v.choice)){counts[v.choice]++;total++}});
+    var max=Math.max(1,Math.max.apply(null,IDS.map(function(i){return counts[i]})));
+    $("#total").textContent=total;
+    IDS.forEach(function(i){var art=$('[data-id="'+i+'"]');
+      $(".bar i",art).style.transform="scaleX("+(counts[i]/max)+")";
+      $(".n",art).textContent=counts[i]+(counts[i]===1?" vote":" votes");
+      $("button.v",art).setAttribute("aria-pressed",mine===i?"true":"false");});
+    var ol=$("#rank");ol.innerHTML="";
+    if(!total){ol.innerHTML="<li>No votes yet.</li>"}
+    IDS.slice().sort(function(a,b){return counts[b]-counts[a]}).forEach(function(i){var li=document.createElement("li");li.textContent=NAMES[i]+" ";var sp=document.createElement("span");sp.textContent="("+counts[i]+", "+Math.round(counts[i]/Math.max(1,total)*100)+"%)";li.appendChild(sp);ol.appendChild(li)});
+    var notes=$("#notes");notes.innerHTML="";
+    rows.filter(function(v){return v.note}).forEach(function(v){var d=document.createElement("div");d.textContent=NAMES[v.choice]+": "+v.note;notes.appendChild(d)});
+  }
+  async function load(){
+    try{
+      var r=await fetch(URL+"/rest/v1/one_glove_brand_votes?select=voter,choice,note&order=created_at.desc",{headers:H()});
+      rows=await r.json(); if(!Array.isArray(rows)) rows=[];
+      var me=rows.find(function(v){return v.voter===voter}); if(me){mine=me.choice; if(!$("#note").value) $("#note").value=me.note||"";}
+      $("#who").textContent=mine?"You voted "+NAMES[mine]+". Tap another to change.":"Pick a direction below.";
+    }catch(e){ $("#who").textContent="Tally unavailable right now; the directions are still readable."; }
+    render();
+  }
+  async function cast(choice){
+    var note=$("#note").value.trim();
+    try{
+      var r=await fetch(URL+"/rest/v1/rpc/one_glove_cast_vote",{method:"POST",headers:H(),body:JSON.stringify({p_voter:voter,p_choice:choice,p_note:note})});
+      if(!r.ok) throw new Error(r.status);
+      mine=choice; await load();
+    }catch(e){ $("#who").textContent="Vote didn’t save; try again in a moment."; }
+  }
+  buttons.forEach(function(b){b.addEventListener("click",function(){cast(b.getAttribute("data-vote"))})});
+  var t;$("#note").addEventListener("input",function(){clearTimeout(t);if(mine){t=setTimeout(function(){cast(mine)},900)}});
+  load(); setInterval(load,15000);
+})();
+</script>
 </body></html>
