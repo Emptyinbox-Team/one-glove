@@ -1,0 +1,189 @@
+{
+  "_note": "Demo seed for One Glove. 20 posts across 16 cities, 4 matched pairs (2 already reunited), 12 open singles. All people, gloves and events are fictional. Coordinates are public landmarks, fuzzed to ~200 m as the app would show them.",
+  "profiles": [
+    {"id": "11111111-0000-4000-8000-000000000001", "handle": "constable_mara", "rank": "Inspector", "reunions_count": 6, "city": "Whistler"},
+    {"id": "11111111-0000-4000-8000-000000000002", "handle": "lefthandluke", "rank": "Constable", "reunions_count": 1, "city": "London"},
+    {"id": "11111111-0000-4000-8000-000000000003", "handle": "yuki_finds_things", "rank": "Constable", "reunions_count": 2, "city": "Sapporo"},
+    {"id": "11111111-0000-4000-8000-000000000004", "handle": "gondola_ghost", "rank": "Recruit", "reunions_count": 0, "city": "Chamonix"},
+    {"id": "11111111-0000-4000-8000-000000000005", "handle": "the_other_half", "rank": "Recruit", "reunions_count": 0, "city": "New York"},
+    {"id": "11111111-0000-4000-8000-000000000006", "handle": "mitten_mo", "rank": "Commissioner", "reunions_count": 27, "city": "Toronto"}
+  ],
+  "posts": [
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000001", "case_number": "OG-2026-00417", "kind": "lost", "status": "matched",
+      "hand": "L", "type": "glove", "colours": ["black"], "material": "leather", "is_child": false,
+      "city": "Whistler, CA", "lat": 50.1155, "lng": -122.9532, "place": "Whistler Village Gondola, lower terminal",
+      "seen_at": "2026-11-28T15:40:00-08:00", "radius_m": 5000, "owner_id": "11111111-0000-4000-8000-000000000004",
+      "note": "Leather palm, small tear across the index finger, smells faintly of ambition. Right hand survives and is cooperating with the investigation.",
+      "photo_path": "demo/og-00417-survivor.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000002", "case_number": "WR-2026-01102", "kind": "found", "status": "matched",
+      "hand": "L", "type": "glove", "colours": ["black"], "material": "leather", "is_child": false,
+      "city": "Whistler, CA", "lat": 50.1139, "lng": -122.9569, "place": "Bench outside the lift office, Skiers Plaza",
+      "seen_at": "2026-11-29T09:10:00-08:00", "radius_m": null, "owner_id": "11111111-0000-4000-8000-000000000001",
+      "note": "Left on the bench, palm up, as if waving. Moved to the lift office lost-and-found, shelf 2.",
+      "photo_path": "demo/wr-01102.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000003", "case_number": "OG-2026-00512", "kind": "lost", "status": "reunited",
+      "hand": "R", "type": "mitten", "colours": ["red", "white"], "material": "wool", "is_child": true,
+      "city": "Toronto, CA", "lat": 43.6426, "lng": -79.3871, "place": "Nathan Phillips Square skating rink",
+      "seen_at": "2026-12-06T17:05:00-05:00", "radius_m": 3000, "owner_id": "11111111-0000-4000-8000-000000000006",
+      "note": "Child's mitten, snowflake pattern, string still attached to the survivor. The child has been informed and is taking it badly.",
+      "photo_path": "demo/og-00512-survivor.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000004", "case_number": "WR-2026-01340", "kind": "found", "status": "reunited",
+      "hand": "R", "type": "mitten", "colours": ["red", "white"], "material": "wool", "is_child": true,
+      "city": "Toronto, CA", "lat": 43.6431, "lng": -79.3860, "place": "Skate rental counter, Nathan Phillips Square",
+      "seen_at": "2026-12-06T18:30:00-05:00", "radius_m": null, "owner_id": "11111111-0000-4000-8000-000000000006",
+      "note": "Handed in by a Zamboni operator who wishes to remain anonymous. Held at the rental counter.",
+      "photo_path": "demo/wr-01340.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000005", "case_number": "OG-2026-00588", "kind": "lost", "status": "reunited",
+      "hand": "L", "type": "glove", "colours": ["navy"], "material": "wool", "is_child": false,
+      "city": "London, GB", "lat": 51.5033, "lng": -0.1195, "place": "Waterloo station, platform 4",
+      "seen_at": "2026-12-01T08:20:00+00:00", "radius_m": 8000, "owner_id": "11111111-0000-4000-8000-000000000005",
+      "note": "Navy knit, thumb darned in a slightly different navy. Last seen boarding the 08:22 to Guildford. May have commuted.",
+      "photo_path": "demo/og-00588-survivor.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000006", "case_number": "WR-2026-01399", "kind": "found", "status": "reunited",
+      "hand": "L", "type": "glove", "colours": ["navy"], "material": "wool", "is_child": false,
+      "city": "London, GB", "lat": 51.2365, "lng": -0.5703, "place": "Guildford station, seat on the 08:22 service",
+      "seen_at": "2026-12-01T09:05:00+00:00", "radius_m": null, "owner_id": "11111111-0000-4000-8000-000000000002",
+      "note": "Found on a seat at the end of the line. It travelled 43 km alone. Left with station staff.",
+      "photo_path": "demo/wr-01399.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000007", "case_number": "OG-2026-00603", "kind": "lost", "status": "matched",
+      "hand": "R", "type": "glove", "colours": ["orange"], "material": "synthetic", "is_child": false,
+      "city": "Sapporo, JP", "lat": 43.0642, "lng": 141.3469, "place": "Odori Park, near the TV tower",
+      "seen_at": "2026-12-12T20:15:00+09:00", "radius_m": 4000, "owner_id": "11111111-0000-4000-8000-000000000003",
+      "note": "Safety orange ski glove, wrist leash cut. Owner reports it was 'definitely on my hand' at the illumination.",
+      "photo_path": "demo/og-00603-survivor.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000008", "case_number": "WR-2026-01421", "kind": "found", "status": "matched",
+      "hand": "R", "type": "glove", "colours": ["orange"], "material": "synthetic", "is_child": false,
+      "city": "Sapporo, JP", "lat": 43.0611, "lng": 141.3543, "place": "Konbini counter, Odori Nishi 1-chome",
+      "seen_at": "2026-12-13T07:40:00+09:00", "radius_m": null, "owner_id": "11111111-0000-4000-8000-000000000003",
+      "note": "Very orange. Staff have placed it next to the oden. It is not for sale.",
+      "photo_path": "demo/wr-01421.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000009", "case_number": "OG-2026-00611", "kind": "lost", "status": "open",
+      "hand": "L", "type": "glove", "colours": ["brown"], "material": "leather", "is_child": false,
+      "city": "New York, US", "lat": 40.7580, "lng": -73.9855, "place": "Times Square, 42nd St subway entrance",
+      "seen_at": "2026-12-14T23:50:00-05:00", "radius_m": 6000, "owner_id": "11111111-0000-4000-8000-000000000005",
+      "note": "Brown cashmere-lined driving glove. Monogrammed 'J.D.', which has not narrowed it down.",
+      "photo_path": "demo/og-00611-survivor.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000010", "case_number": "WR-2026-01455", "kind": "found", "status": "open",
+      "hand": "R", "type": "glove", "colours": ["grey"], "material": "wool", "is_child": false,
+      "city": "Chicago, US", "lat": 41.8827, "lng": -87.6233, "place": "Cloud Gate, Millennium Park",
+      "seen_at": "2026-12-10T14:00:00-06:00", "radius_m": null, "owner_id": null,
+      "note": "Grey, reflected 400 times. Placed on the low wall facing the bean.",
+      "photo_path": "demo/wr-01455.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000011", "case_number": "OG-2026-00640", "kind": "lost", "status": "open",
+      "hand": "R", "type": "mitten", "colours": ["green"], "material": "wool", "is_child": false,
+      "city": "Reykjavik, IS", "lat": 64.1466, "lng": -21.9426, "place": "Hallgrimskirkja steps",
+      "seen_at": "2026-12-03T16:30:00+00:00", "radius_m": 10000, "owner_id": null,
+      "note": "Lopapeysa-pattern mitten, hand knit by a grandmother who will be asking about it at Christmas.",
+      "photo_path": "demo/og-00640-survivor.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000012", "case_number": "WR-2026-01470", "kind": "found", "status": "open",
+      "hand": "L", "type": "glove", "colours": ["black", "yellow"], "material": "synthetic", "is_child": false,
+      "city": "Oslo, NO", "lat": 59.9639, "lng": 10.6640, "place": "Holmenkollen ski jump, viewing platform",
+      "seen_at": "2026-12-08T12:15:00+01:00", "radius_m": null, "owner_id": null,
+      "note": "Cross-country racing glove. Owner presumably still going. Left at the museum ticket desk.",
+      "photo_path": "demo/wr-01470.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000013", "case_number": "OG-2026-00652", "kind": "lost", "status": "open",
+      "hand": "L", "type": "glove", "colours": ["pink"], "material": "synthetic", "is_child": true,
+      "city": "Stockholm, SE", "lat": 59.3251, "lng": 18.0711, "place": "Gamla stan, Stortorget Christmas market",
+      "seen_at": "2026-12-05T15:45:00+01:00", "radius_m": 3000, "owner_id": null,
+      "note": "Pink with a unicorn on the cuff. The unicorn is described as 'important'.",
+      "photo_path": "demo/og-00652-survivor.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000014", "case_number": "WR-2026-01488", "kind": "found", "status": "open",
+      "hand": "R", "type": "glove", "colours": ["tan"], "material": "leather", "is_child": false,
+      "city": "Berlin, DE", "lat": 52.5163, "lng": 13.3777, "place": "Brandenburg Gate, Pariser Platz",
+      "seen_at": "2026-12-09T18:00:00+01:00", "radius_m": null, "owner_id": null,
+      "note": "Tan leather, lined. Found upright in the snow like a flag. Now at the tourist information kiosk.",
+      "photo_path": "demo/wr-01488.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000015", "case_number": "OG-2026-00667", "kind": "lost", "status": "open",
+      "hand": "R", "type": "glove", "colours": ["black"], "material": "synthetic", "is_child": false,
+      "city": "Zurich, CH", "lat": 47.3769, "lng": 8.5417, "place": "Zurich HB, tram stop Bahnhofplatz",
+      "seen_at": "2026-12-02T07:55:00+01:00", "radius_m": 5000, "owner_id": null,
+      "note": "Touchscreen-compatible. Owner's phone has been unresponsive to the survivor ever since.",
+      "photo_path": "demo/og-00667-survivor.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000016", "case_number": "WR-2026-01501", "kind": "found", "status": "open",
+      "hand": "L", "type": "glove", "colours": ["blue"], "material": "synthetic", "is_child": false,
+      "city": "Chamonix, FR", "lat": 45.9237, "lng": 6.8694, "place": "Aiguille du Midi cable car, mid station",
+      "seen_at": "2026-12-11T11:20:00+01:00", "radius_m": null, "owner_id": "11111111-0000-4000-8000-000000000004",
+      "note": "Blue mountaineering glove, gauntlet cuff. Found at 2,317 m. It has been higher than most of us.",
+      "photo_path": "demo/wr-01501.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000017", "case_number": "OG-2026-00681", "kind": "lost", "status": "open",
+      "hand": "L", "type": "glove", "colours": ["white"], "material": "leather", "is_child": false,
+      "city": "Seoul, KR", "lat": 37.5665, "lng": 126.9780, "place": "Seoul Plaza skating rink",
+      "seen_at": "2026-12-13T21:00:00+09:00", "radius_m": 4000, "owner_id": null,
+      "note": "White leather, now presumably less white. Part of a matching set with a scarf that is also under observation.",
+      "photo_path": "demo/og-00681-survivor.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000018", "case_number": "WR-2026-01522", "kind": "found", "status": "open",
+      "hand": "R", "type": "mitten", "colours": ["grey", "black"], "material": "wool", "is_child": false,
+      "city": "Montreal, CA", "lat": 45.5088, "lng": -73.5878, "place": "Mont-Royal lookout, Kondiaronk Belvedere",
+      "seen_at": "2026-12-07T16:10:00-05:00", "radius_m": null, "owner_id": null,
+      "note": "Convertible mitten, flap open. Found facing the skyline. Left on the chalet windowsill.",
+      "photo_path": "demo/wr-01522.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000019", "case_number": "OG-2026-00699", "kind": "lost", "status": "open",
+      "hand": "R", "type": "glove", "colours": ["black"], "material": "leather", "is_child": false,
+      "city": "Edinburgh, GB", "lat": 55.9486, "lng": -3.1999, "place": "Royal Mile, outside St Giles' Cathedral",
+      "seen_at": "2026-12-04T19:30:00+00:00", "radius_m": 5000, "owner_id": null,
+      "note": "Black leather, short cuff, slightly wet. Lost in wind conditions the owner describes as 'personal'.",
+      "photo_path": "demo/og-00699-survivor.jpg"
+    },
+    {
+      "id": "aaaaaaaa-0000-4000-8000-000000000020", "case_number": "WR-2026-01540", "kind": "found", "status": "open",
+      "hand": "L", "type": "glove", "colours": ["red"], "material": "synthetic", "is_child": false,
+      "city": "Queenstown, NZ", "lat": -45.0312, "lng": 168.6626, "place": "Skyline Gondola, top terminal",
+      "seen_at": "2026-12-15T10:45:00+13:00", "radius_m": null, "owner_id": null,
+      "note": "Red fleece glove found in summer. Either very lost, or very early. Held at the top terminal desk.",
+      "photo_path": "demo/wr-01540.jpg"
+    }
+  ],
+  "matches": [
+    {"id": "bbbbbbbb-0000-4000-8000-000000000001", "lost_post_id": "aaaaaaaa-0000-4000-8000-000000000001", "found_post_id": "aaaaaaaa-0000-4000-8000-000000000002", "score": 0.91, "lost_confirmed": true, "found_confirmed": false, "created_at": "2026-11-29T09:12:00-08:00"},
+    {"id": "bbbbbbbb-0000-4000-8000-000000000002", "lost_post_id": "aaaaaaaa-0000-4000-8000-000000000003", "found_post_id": "aaaaaaaa-0000-4000-8000-000000000004", "score": 0.96, "lost_confirmed": true, "found_confirmed": true, "created_at": "2026-12-06T18:32:00-05:00"},
+    {"id": "bbbbbbbb-0000-4000-8000-000000000003", "lost_post_id": "aaaaaaaa-0000-4000-8000-000000000005", "found_post_id": "aaaaaaaa-0000-4000-8000-000000000006", "score": 0.84, "lost_confirmed": true, "found_confirmed": true, "created_at": "2026-12-01T09:07:00+00:00"},
+    {"id": "bbbbbbbb-0000-4000-8000-000000000004", "lost_post_id": "aaaaaaaa-0000-4000-8000-000000000007", "found_post_id": "aaaaaaaa-0000-4000-8000-000000000008", "score": 0.93, "lost_confirmed": false, "found_confirmed": true, "created_at": "2026-12-13T07:42:00+09:00"}
+  ],
+  "reunions": [
+    {"id": "cccccccc-0000-4000-8000-000000000001", "match_id": "bbbbbbbb-0000-4000-8000-000000000002", "days_apart": 1, "distance_m": 110, "shared_count": 42, "reunited_at": "2026-12-07T10:00:00-05:00"},
+    {"id": "cccccccc-0000-4000-8000-000000000002", "match_id": "bbbbbbbb-0000-4000-8000-000000000003", "days_apart": 4, "distance_m": 43200, "shared_count": 318, "reunited_at": "2026-12-05T18:15:00+00:00"}
+  ],
+  "season_report_demo": {
+    "label": "Winter 2026 to date (demo figures)",
+    "posts": 20, "lost": 10, "found": 10, "left_hand": 10, "right_hand": 10,
+    "mittens": 4, "children": 2, "reunions": 2, "open_matches": 2,
+    "longest_journey_m": 43200, "fastest_reunion_days": 1, "cities": 16, "countries": 12
+  }
+}

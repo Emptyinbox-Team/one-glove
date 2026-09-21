@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>One Glove Walkthrough</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{
+  --paper:#f2efe6; --paper-2:#e9e5d8; --ink:#17160f; --ink-2:#4a4840; --rule:#c9c4b3; --orange:#ff5a1f; --stamp:#b3251c;
+  --display:"Stardos Stencil","Impact","Arial Narrow",sans-serif;
+  --mono:"Courier Prime","Courier New",Courier,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --paper:#15140f; --paper-2:#1f1d16; --ink:#ece7d8; --ink-2:#b3ad9c; --rule:#3a372c; --orange:#ff6a33; --stamp:#e0473c; }
+}
+:root[data-theme="dark"]{ --paper:#15140f; --paper-2:#1f1d16; --ink:#ece7d8; --ink-2:#b3ad9c; --rule:#3a372c; --orange:#ff6a33; --stamp:#e0473c; }
+
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--mono);font-size:16px;line-height:1.5}
+*{box-sizing:border-box}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1;margin:0;text-wrap:balance;letter-spacing:.01em}
+p{margin:0}
+
+.bar{position:fixed;left:0;right:0;top:0;padding-top:env(safe-area-inset-top,0px);z-index:9;background:var(--paper);border-bottom:2px solid var(--ink)}
+.bar-in{display:flex;justify-content:space-between;align-items:center;padding:8px 16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.bar-in b{color:var(--orange)}
+.progress{height:4px;background:var(--paper-2)}
+.progress i{display:block;height:100%;width:100%;transform:scaleX(0);transform-origin:left;background:var(--orange);transition:transform .25s}
+@media (prefers-reduced-motion:reduce){.progress i{transition:none}}
+
+main{scroll-snap-type:y proximity}
+.slide{min-height:100svh;padding-block:88px 56px;padding-inline:16px;scroll-snap-align:start;display:grid;align-content:center;border-bottom:1px dashed var(--rule)}
+.in{max-width:920px;margin:0 auto;width:100%}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);margin-bottom:14px}
+.eyebrow::before{content:"§ "}
+.lead{font-size:18px;max-width:66ch;margin-top:18px}
+.grid{display:grid;gap:1px;background:var(--ink);border:2px solid var(--ink);margin-top:28px}
+.grid>div{background:var(--paper);padding:16px}
+.grid h3{font-size:22px;margin-bottom:6px}
+.grid p{font-size:14px;color:var(--ink-2)}
+.c2{grid-template-columns:repeat(2,1fr)} .c3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:640px){.c2,.c3{grid-template-columns:1fr}}
+
+/* cover */
+.cover h1{font-size:clamp(64px,16vw,168px);letter-spacing:.02em}
+.cover .sub{font-size:clamp(16px,2.4vw,22px);margin-top:14px;max-width:44ch}
+.stamp{display:inline-block;margin-top:28px;padding:8px 14px;border:3px solid var(--stamp);color:var(--stamp);font-family:var(--display);font-size:26px;letter-spacing:.12em;transform:rotate(-4deg);text-transform:uppercase}
+
+/* poster */
+.poster{border:3px solid var(--ink);padding:22px;max-width:420px;margin-top:28px;background:var(--paper-2);position:relative}
+.poster h3{font-size:64px;letter-spacing:.06em;text-align:center}
+.poster .ph{aspect-ratio:1;background:repeating-linear-gradient(45deg,var(--rule) 0 6px,transparent 6px 14px);border:2px solid var(--ink);margin:14px 0;display:grid;place-items:center;color:var(--ink-2);font-size:12px;letter-spacing:.14em;text-transform:uppercase;max-width:100%}
+.poster dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px;margin:0}
+.poster dt{color:var(--ink-2);text-transform:uppercase;letter-spacing:.1em;font-size:11px}
+.poster dd{margin:0}
+.poster .tape{position:absolute;top:-10px;left:50%;width:90px;height:20px;background:var(--orange);opacity:.8;transform:translateX(-50%) rotate(-2deg)}
+
+/* flow */
+.flow{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;align-items:stretch}
+.flow .step{flex:1 1 150px;border:2px solid var(--ink);padding:14px;position:relative}
+.flow .step b{display:block;font-family:var(--display);font-size:22px;margin-bottom:6px}
+.flow .step span{font-size:13px;color:var(--ink-2)}
+.flow .step:not(:last-child)::after{content:"→";position:absolute;right:-13px;top:50%;transform:translateY(-50%);background:var(--paper);padding:0 2px;color:var(--orange);font-weight:700}
+@media (max-width:640px){.flow .step:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-16px;transform:translateX(-50%)}}
+
+/* table */
+.tw{overflow-x:auto;margin-top:28px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{border:1px solid var(--ink);padding:10px 12px;text-align:left;vertical-align:top}
+th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--paper-2)}
+td.k{font-family:var(--display);font-size:18px;white-space:nowrap}
+.num{font-variant-numeric:tabular-nums}
+
+.formula{margin-top:22px;padding:14px 16px;border:2px solid var(--ink);background:var(--paper-2);font-size:15px;overflow-x:auto}
+.kpi{display:flex;flex-wrap:wrap;gap:24px 40px;margin-top:28px}
+.kpi div b{display:block;font-family:var(--display);font-size:clamp(40px,7vw,72px);line-height:1;color:var(--orange)}
+.kpi div span{font-size:13px;color:var(--ink-2);letter-spacing:.08em;text-transform:uppercase}
+ul.plain{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px;max-width:66ch}
+ul.plain li{padding-left:26px;position:relative}
+ul.plain li::before{content:"☐";position:absolute;left:0;color:var(--orange)}
+.nav{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;gap:6px;z-index:9}
+.nav button{font-family:var(--mono);font-size:14px;background:var(--paper);color:var(--ink);border:2px solid var(--ink);width:40px;height:40px;cursor:pointer}
+.nav button:hover,.nav button:focus-visible{background:var(--orange);color:#fff;outline:none}
+.hint{font-size:12px;color:var(--ink-2);margin-top:26px;letter-spacing:.1em;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="bar-in"><span>One Glove <b>·</b> Product walkthrough</span><span id="count">01 / 10</span></div><div class="progress"><i id="prog"></i></div></div>
+
+<main id="main">
+
+<section class="slide cover"><div class="in">
+  <p class="eyebrow">Case file, opened 20 Sep 2026</p>
+  <h1>ONE GLOVE</h1>
+  <p class="sub">A missing-persons bureau for gloves. Post a lost glove or a found glove, get matched with its other half nearby, share the reunion.</p>
+  <span class="stamp">Presumed single</span>
+  <p class="hint">Arrow keys or space to advance</p>
+</div></section>
+
+<section class="slide"><div class="in">
+  <p class="eyebrow">01 · The pitch</p>
+  <h2 style="font-size:clamp(36px,7vw,72px)">Nobody has built the matching layer.</h2>
+  <p class="lead">Gloves are the one lost item people already photograph and joke about. Instagram accounts, NPR segments and Tom Hanks have all made the joke. No one has closed the loop: found glove, meet lost glove.</p>
+  <div class="grid c3">
+    <div><h3>Why gloves</h3><p>Universally relatable, slightly absurd, photographs well. The joke has legs.</p></div>
+    <div><h3>Why now</h3><p>Share sheets, on-device image embeddings and App Clips make it a 20-second loop.</p></div>
+    <div><h3>Why here</h3><p>Whistler and the Sea-to-Sky corridor: dense, glove-heavy, six-month season from November.</p></div>
+  </div>
+</div></section>
+
+<section class="slide"><div class="in">
+  <p class="eyebrow">02 · Brand and tone</p>
+  <h2 style="font-size:clamp(36px,7vw,72px)">Deadpan. The app never winks.</h2>
+  <p class="lead">A bureaucracy that takes gloves with total seriousness. The comedy is the gap between the gravity of the language and the triviality of the object.</p>
+  <div class="grid c2">
+    <div><h3>Case</h3><p>A lost glove. Numbered: OG-2026-00417.</p></div>
+    <div><h3>Witness Report</h3><p>A found glove. One photo, one tap.</p></div>
+    <div><h3>Reunion</h3><p>Both sides confirm. The one warm moment in the product.</p></div>
+    <div><h3>Archived, presumed single</h3><p>Unclaimed after 30 days.</p></div>
+  </div>
+  <p class="lead" style="font-size:15px;color:var(--ink-2)">No exclamation marks, no emoji, never the word "fun". Push notifications read like telegrams. Typewriter and stencil type, off-white, one accent: safety orange.</p>
+</div></section>
+
+<section class="slide"><div class="in">
+  <p class="eyebrow">03 · The growth engine</p>
+  <h2 style="font-size:clamp(36px,7vw,72px)">Every case makes a poster.</h2>
+  <p class="lead">Auto-generated from the case file, exported as a 9:16 story and a printable PDF. Funny with zero matches, so it works from day one.</p>
+  <div class="poster"><i class="tape"></i>
+    <h3>MISSING</h3>
+    <div class="ph">Evidence photo · 14 Dec 2026</div>
+    <dl>
+      <dt>Case</dt><dd>OG-2026-00417</dd>
+      <dt>Hand</dt><dd>Left. Right hand survives.</dd>
+      <dt>Last seen</dt><dd>Whistler Village Gondola, lower terminal</dd>
+      <dt>Features</dt><dd>Leather palm, small tear, smells faintly of ambition</dd>
+      <dt>Reward</dt><dd>One firm handshake</dd>
+    </dl>
+  </div>
+</div></section>
+
+<section class="slide"><div class="in">
+  <p class="eyebrow">04 · Core loop</p>
+  <h2 style="font-size:clamp(36px,7vw,72px)">Post. Match. Reunite. Share.</h2>
+  <p class="lead">Under a minute of user effort. The found side is the engine: finders have zero stake, so a Witness Report is one photo and one tap, no account.</p>
+  <div class="flow">
+    <div class="step"><b>Photograph</b><span>Camera, auto-location</span></div>
+    <div class="step"><b>Lost or found</b><span>Case or Witness Report</span></div>
+    <div class="step"><b>Match</b><span>Top five candidates, both sides notified</span></div>
+    <div class="step"><b>Handoff</b><span>Chat, or leave it somewhere public</span></div>
+    <div class="step"><b>Reunion card</b><span>Share sheet, finder gets credit</span></div>
+  </div>
+  <p class="lead" style="font-size:15px;color:var(--ink-2)">Key insight: a lost post includes a photo of the survivor, the glove you still have. We match glove to glove, not glove to memory.</p>
+</div></section>
+
+<section class="slide"><div class="in">
+  <p class="eyebrow">05 · Viral hooks</p>
+  <h2 style="font-size:clamp(36px,7vw,72px)">Make the image. They hit share.</h2>
+  <div class="tw"><table>
+    <tr><th>Hook</th><th>What the user gets</th><th>Why it spreads</th></tr>
+    <tr><td class="k">Missing Poster</td><td>Story + printable PDF from any case</td><td>Their own glove, funny alone</td></tr>
+    <tr><td class="k">Reunion Card</td><td>"REUNITED after 11 days, 3.4 km apart"</td><td>Tags a second person</td></tr>
+    <tr><td class="k">The Wall</td><td>Public map of unclaimed gloves by "days single"</td><td>Locals browse it like a blotter</td></tr>
+    <tr><td class="k">Detective ranks</td><td>Constable at 1, Inspector at 5, Commissioner at 25</td><td>Repeat finders</td></tr>
+    <tr><td class="k">Season Report</td><td>"Whistler lost 1,412 gloves. 61% were left hands."</td><td>Annual press hook</td></tr>
+    <tr><td class="k">QR posters</td><td>App Clip report flow, no install</td><td>Meets the finder at the glove</td></tr>
+  </table></div>
+  <div class="kpi"><div><b class="num">0.3</b><span>Shares per post, target month one</span></div></div>
+</div></section>
+
+<section class="slide"><div class="in">
+  <p class="eyebrow">06 · Matching</p>
+  <h2 style="font-size:clamp(36px,7vw,72px)">The app proposes. Humans confirm.</h2>
+  <div class="grid c3">
+    <div><h3>Hand</h3><p>Hard filter. A left survivor only matches a right found. Halves the search.</p></div>
+    <div><h3>Geo + time</h3><p>Within radius (default 5 km), found on or after last-seen, 60-day window.</p></div>
+    <div><h3>Attributes</h3><p>Glove or mitten, colour, material, adult or child. On-device classifier.</p></div>
+    <div><h3>Visual similarity</h3><p>On-device image embedding, pgvector cosine distance, also compared against the mirrored survivor.</p></div>
+    <div><h3>Confirm</h3><p>"That's it" from both sides opens Handoff. "Not mine" is never resurfaced.</p></div>
+    <div><h3>Learn</h3><p>Confirmed reunions become labelled pairs; weights get tuned after season one.</p></div>
+  </div>
+  <div class="formula num">score = 0.45·sim + 0.20·geo + 0.15·time + 0.20·attr &nbsp;·&nbsp; hand mismatch ⇒ 0</div>
+</div></section>
+
+<section class="slide"><div class="in">
+  <p class="eyebrow">07 · Screens</p>
+  <h2 style="font-size:clamp(36px,7vw,72px)">Seven screens. Nothing else.</h2>
+  <div class="grid c2">
+    <div><h3>The Wall</h3><p>Home. Nearby cases and reports, map or list, big Report button.</p></div>
+    <div><h3>Report</h3><p>Found glove. Camera, pin, one optional line. No login.</p></div>
+    <div><h3>Open a Case</h3><p>Lost glove. Survivor photo, last-seen pin and date, radius.</p></div>
+    <div><h3>Case File</h3><p>Evidence photo, case number, map, candidates, share poster.</p></div>
+    <div><h3>Matches</h3><p>Side-by-side pairs. "That's it" or "Not mine".</p></div>
+    <div><h3>Chat + Handoff</h3><p>Minimal chat, "where I left it" pin, mark reunited.</p></div>
+    <div><h3>Reunion</h3><p>Card, share sheet, rank progress.</p></div>
+    <div><h3>Sign in with Apple</h3><p>Only when chatting or confirming. Everything else is anonymous.</p></div>
+  </div>
+</div></section>
+
+<section class="slide"><div class="in">
+  <p class="eyebrow">08 · Tech</p>
+  <h2 style="font-size:clamp(36px,7vw,72px)">SwiftUI front. Supabase back. No servers.</h2>
+  <div class="tw"><table>
+    <tr><th>Layer</th><th>Choice</th></tr>
+    <tr><td class="k">App</td><td>SwiftUI, Swift 6, iOS 17+, MVVM with Observation</td></tr>
+    <tr><td class="k">Vision</td><td>Vision hand pose + subject lift, Core ML feature print, all on device</td></tr>
+    <tr><td class="k">Backend</td><td>Supabase: Postgres + PostGIS + pgvector, Storage, Auth, Edge Functions, Realtime</td></tr>
+    <tr><td class="k">Push</td><td>APNs via Edge Function on a database webhook</td></tr>
+    <tr><td class="k">Share assets</td><td>SwiftUI ImageRenderer to PNG and PDF</td></tr>
+    <tr><td class="k">App Clip</td><td>Report flow only, launched from poster QR codes</td></tr>
+  </table></div>
+  <p class="lead" style="font-size:15px;color:var(--ink-2)">Tables: profiles, posts, matches, messages, reunions. Matching is a Postgres function called on every new post. Repo: one-glove/ with ios/ and supabase/ side by side.</p>
+</div></section>
+
+<section class="slide"><div class="in">
+  <p class="eyebrow">09 · Roadmap</p>
+  <h2 style="font-size:clamp(36px,7vw,72px)">Live before opening weekend.</h2>
+  <div class="flow">
+    <div class="step"><b>Case file</b><span>By 16 Oct. Schema, Wall, Report, Open a Case, poster export. TestFlight to 20 friends.</span></div>
+    <div class="step"><b>Matching</b><span>By 13 Nov. Embeddings, match function, Matches, push, chat, reunion card.</span></div>
+    <div class="step"><b>Launch</b><span>By 27 Nov. App Store, QR posters in Whistler Village, 30 seeded cases, Glove of the Week.</span></div>
+  </div>
+  <p class="lead" style="font-size:15px;color:var(--ink-2)">Out of scope for v1: Android, web, rewards, partnerships, monetisation. Done means a stranger can post a found glove in 30 seconds without an account, and the owner gets it back without talking to us.</p>
+</div></section>
+
+<section class="slide"><div class="in">
+  <p class="eyebrow">10 · Decisions needed</p>
+  <h2 style="font-size:clamp(36px,7vw,72px)">Four questions, then we build.</h2>
+  <ul class="plain">
+    <li>Seed market: Whistler only, or Whistler plus Vancouver from day one?</li>
+    <li>Which entity owns it: Watchkeeper, Ctrl Alt Delete, or new?</li>
+    <li>Small budget for printed posters and a launch-weekend stunt?</li>
+    <li>Mittens in classifier scope? (Recommended: yes.)</li>
+  </ul>
+  <p class="eyebrow" style="margin-top:36px">Next steps</p>
+  <ul class="plain" style="margin-top:0">
+    <li>Check oneglove.app and social handles</li>
+    <li>Design the poster and reunion card first; they are the product's face</li>
+    <li>Scaffold Supabase and the SwiftUI app under one-glove/</li>
+    <li>Recruit 20 TestFlight testers in the Sea-to-Sky corridor</li>
+  </ul>
+</div></section>
+
+</main>
+
+<div class="nav"><button id="prev" aria-label="Previous slide">↑</button><button id="next" aria-label="Next slide">↓</button></div>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide')),n=slides.length,cur=0;
+  var count=document.getElementById('count'),prog=document.getElementById('prog');
+  function pad(i){return (i<10?'0':'')+i}
+  function show(){count.textContent=pad(cur+1)+' / '+pad(n);prog.style.transform='scaleX('+((cur+1)/n)+')'}
+  function go(i){cur=Math.max(0,Math.min(n-1,i));slides[cur].scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});show()}
+  document.getElementById('next').onclick=function(){go(cur+1)};
+  document.getElementById('prev').onclick=function(){go(cur-1)};
+  addEventListener('keydown',function(e){
+    if(['ArrowDown','ArrowRight',' ','PageDown'].indexOf(e.key)>-1){e.preventDefault();go(cur+1)}
+    else if(['ArrowUp','ArrowLeft','PageUp'].indexOf(e.key)>-1){e.preventDefault();go(cur-1)}
+  });
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){cur=slides.indexOf(x.target);show()}})},{threshold:.55});
+  slides.forEach(function(s){io.observe(s)});
+  show();
+})();
+</script>
+</body>
+</html>

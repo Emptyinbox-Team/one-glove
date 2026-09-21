@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Glove Brand Vote</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@400;600;800&family=Caveat:wght@700&family=Quicksand:wght@500;700&family=Fredoka:wght@500;700&family=Bebas+Neue&family=Work+Sans:wght@400;600&family=Special+Elite&display=swap">
+<style>
+:root{--bg:#f7f3ea;--bg2:#fff;--ink:#1f1c17;--ink2:#5c574d;--line:#e3dccb;--accent:#e4432b;--ok:#1e8a4c;--body:"Nunito",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171512;--bg2:#211e19;--ink:#f1ece0;--ink2:#b5ad9c;--line:#3a352c;--accent:#ff6b57;--ok:#3bbf75}}
+:root[data-theme="dark"]{--bg:#171512;--bg2:#211e19;--ink:#f1ece0;--ink2:#b5ad9c;--line:#3a352c;--accent:#ff6b57;--ok:#3bbf75}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+.wrap{max-width:1100px;margin:0 auto;padding-block:32px 80px;padding-inline:16px}
+header h1{font-family:"Righteous",sans-serif;font-size:clamp(34px,6vw,56px);margin:0;line-height:1.05;text-wrap:balance}
+header p{max-width:66ch;color:var(--ink2);margin:10px 0 0}
+.status{margin-top:16px;padding:12px 14px;border:1px solid var(--line);background:var(--bg2);font-size:14px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.status b{color:var(--accent)}
+.opts{display:grid;gap:28px;margin-top:32px}
+.opt{border:1px solid var(--line);background:var(--bg2);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);overflow:hidden}
+@media (max-width:760px){.opt{grid-template-columns:1fr}}
+.hero{min-height:320px;display:grid;place-items:center;padding:28px;position:relative}
+.hero svg{width:min(100%,300px);height:auto;display:block}
+.tag{position:absolute;left:16px;top:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;opacity:.85}
+.body{padding:22px 22px 20px;display:flex;flex-direction:column;gap:14px}
+.body h2{margin:0;font-size:30px;line-height:1.1}
+.body .thesis{margin:0;color:var(--ink2)}
+.body .line{margin:0;font-size:22px;line-height:1.2}
+.sw{display:flex;gap:6px}
+.sw i{flex:1;height:34px;display:block;border:1px solid rgba(0,0,0,.12)}
+.sw{position:relative}
+.meta{font-size:13px;color:var(--ink2);display:grid;grid-template-columns:auto 1fr;gap:4px 12px}
+.meta dt{font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:11px;padding-top:2px}
+.meta dd{margin:0}
+.vote{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+button.v{font:inherit;font-weight:800;padding:10px 18px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+button.v:hover,button.v:focus-visible{background:var(--ink);color:var(--bg);outline:none}
+button.v[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+button.v[disabled]{opacity:.5;cursor:not-allowed}
+.bar{flex:1 1 140px;height:10px;background:var(--line);position:relative;min-width:120px}
+.bar i{position:absolute;inset:0;width:100%;transform:scaleX(0);background:var(--accent);transform-origin:left}
+.n{font-size:13px;color:var(--ink2);min-width:64px;font-variant-numeric:tabular-nums}
+.results{margin-top:40px;border:1px solid var(--line);background:var(--bg2);padding:20px}
+.results h2{font-family:"Righteous",sans-serif;margin:0 0 6px;font-size:26px}
+.results ol{margin:12px 0 0;padding-left:20px;display:grid;gap:6px}
+.results li span{color:var(--ink2);font-size:14px}
+label.note{display:block;font-size:14px;color:var(--ink2);margin-top:14px}
+input#note{font:inherit;width:100%;max-width:520px;padding:9px 10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);margin-top:6px}
+.notes{margin-top:14px;display:grid;gap:8px;font-size:14px}
+.notes div{padding:8px 10px;border:1px solid var(--line)}
+.fine{margin-top:16px;font-size:13px;color:var(--ink2)}
+@media (prefers-reduced-motion:no-preference){.bar i{transition:transform .4s}}
+</style></head><body>
+
+<div class="wrap">
+<header>
+  <h1>One Glove: five brand directions</h1>
+  <p>Same app, same name, warmer heart. Each direction below is a full identity: mark, palette, type pairing and the line we'd put on the poster. Pick the one you'd be proud to wear on a beanie, then leave a note. You can change your vote any time; the tally updates live for everyone.</p>
+  <div class="status"><span>Voting happens on the live ballot linked in the README; this page is the read-only gallery.</span></div>
+</header>
+
+<section class="opts" id="opts">
+
+<!-- 1 SUNRISE SESSION -->
+<article class="opt" data-id="sunrise">
+  <div class="hero" style="background:#FFF6E0;color:#1B1A17">
+    <span class="tag">Direction 01</span>
+    <svg viewBox="0 0 300 300" role="img" aria-label="Open glove in front of a sunburst">
+      <g transform="translate(150 160)">
+        <g fill="#F5B400">
+          <path d="M0 0 L-140 -60 L-140 -30 Z"/><path d="M0 0 L-140 10 L-140 40 Z"/><path d="M0 0 L-110 90 L-90 115 Z"/><path d="M0 0 L-40 140 L-10 140 Z"/><path d="M0 0 L40 140 L10 140 Z"/><path d="M0 0 L110 90 L90 115 Z"/><path d="M0 0 L140 10 L140 40 Z"/><path d="M0 0 L140 -60 L140 -30 Z"/><path d="M0 0 L100 -110 L120 -90 Z"/><path d="M0 0 L-100 -110 L-120 -90 Z"/><path d="M0 0 L-40 -145 L-10 -145 Z"/><path d="M0 0 L40 -145 L10 -145 Z"/>
+        </g>
+        <circle r="78" fill="#E4432B"/>
+        <path fill="#FFF6E0" d="M-34 40 c-14 0 -24 -12 -24 -28 v-34 c0 -6 4 -10 9 -10 s9 4 9 10 v20 h4 v-52 c0 -6 4 -10 9 -10 s9 4 9 10 v46 h4 v-58 c0 -6 4 -10 9 -10 s9 4 9 10 v58 h4 v-50 c0 -6 4 -10 9 -10 s9 4 9 10 v56 h4 v-30 c0 -6 4 -10 9 -10 s9 4 9 10 v46 c0 20 -14 36 -36 36 z"/>
+      </g>
+      <text x="150" y="272" text-anchor="middle" font-family="Righteous, sans-serif" font-size="30" fill="#1E8A4C">ONE GLOVE</text>
+    </svg>
+  </div>
+  <div class="body">
+    <h2 style="font-family:'Righteous',sans-serif">Sunrise Session</h2>
+    <p class="thesis">A 1970s festival poster: sunburst, open palm, primary warmth. The whole brand says "come as you are, we'll find your other half." Loudest of the five, and the most obviously joyful.</p>
+    <p class="line" style="font-family:'Righteous',sans-serif;color:#E4432B">One glove. One love. Come back together.</p>
+    <div class="sw"><i style="background:#F5B400"></i><i style="background:#E4432B"></i><i style="background:#1E8A4C"></i><i style="background:#FFF6E0"></i><i style="background:#1B1A17"></i></div>
+    <dl class="meta"><dt>Type</dt><dd>Righteous for display, Nunito for everything else</dd><dt>Voice</dt><dd>Warm, plain, a little sung. "Your glove's been waiting."</dd><dt>Icon</dt><dd>Red sun, cream glove, gold rays. Reads at 29 px.</dd><dt>Risk</dt><dd>Red-gold-green carries cultural weight; wear it with respect, never with clichés.</dd></dl>
+    </div>
+</article>
+
+<!-- 2 TWO HANDS -->
+<article class="opt" data-id="twohands">
+  <div class="hero" style="background:#F3E3C3;color:#4A2E23">
+    <span class="tag">Direction 02</span>
+    <svg viewBox="0 0 300 300" role="img" aria-label="Two mittens meeting to form a heart">
+      <path fill="#FF6B57" d="M150 250 C110 215 60 185 60 130 c0 -30 22 -52 50 -52 c18 0 32 10 40 24 v148 z"/>
+      <path fill="#0E8C86" d="M150 250 C190 215 240 185 240 130 c0 -30 -22 -52 -50 -52 c-18 0 -32 10 -40 24 v148 z"/>
+      <path fill="#F3E3C3" d="M96 98 c-10 -6 -20 -4 -26 6 c-6 10 -2 20 8 26 l20 10 z"/>
+      <path fill="#F3E3C3" d="M204 98 c10 -6 20 -4 26 6 c6 10 2 20 -8 26 l-20 10 z"/>
+      <rect x="120" y="60" width="30" height="16" fill="#FF6B57"/><rect x="150" y="60" width="30" height="16" fill="#0E8C86"/>
+      <text x="150" y="282" text-anchor="middle" font-family="Caveat, cursive" font-weight="700" font-size="44" fill="#4A2E23">one glove</text>
+    </svg>
+  </div>
+  <div class="body">
+    <h2 style="font-family:'Quicksand',sans-serif;font-weight:700">Two Hands</h2>
+    <p class="thesis">Two mittens, two colours, one heart-shaped gap between them. The mark is the reunion itself. Soft, friendly, the kind of brand a parent trusts with a child's lost mitten.</p>
+    <p class="line" style="font-family:'Caveat',cursive;font-weight:700;color:#0E8C86;font-size:30px">Every glove has a somebody.</p>
+    <div class="sw"><i style="background:#FF6B57"></i><i style="background:#0E8C86"></i><i style="background:#F3E3C3"></i><i style="background:#4A2E23"></i><i style="background:#FFFFFF"></i></div>
+    <dl class="meta"><dt>Type</dt><dd>Caveat (hand-written) for headlines, Quicksand for UI</dd><dt>Voice</dt><dd>Gentle, first-person, hopeful. Notifications feel like a neighbour knocking.</dd><dt>Icon</dt><dd>The heart-gap between the two mittens, coral on teal.</dd><dt>Risk</dt><dd>Least edgy. Could read as a kids' brand if the copy goes soft.</dd></dl>
+    </div>
+</article>
+
+<!-- 3 KNIT TOGETHER -->
+<article class="opt" data-id="knit">
+  <div class="hero" style="background:#EFE7D6;color:#2F4F3A;background-image:repeating-linear-gradient(90deg,rgba(47,79,58,.08) 0 3px,transparent 3px 14px),repeating-linear-gradient(0deg,rgba(47,79,58,.08) 0 3px,transparent 3px 14px)">
+    <span class="tag">Direction 03</span>
+    <svg viewBox="0 0 300 300" role="img" aria-label="Embroidered glove badge">
+      <circle cx="150" cy="140" r="108" fill="#D9A21B"/>
+      <circle cx="150" cy="140" r="98" fill="none" stroke="#9B2D4A" stroke-width="6" stroke-dasharray="10 8"/>
+      <path fill="#EFE7D6" stroke="#2F4F3A" stroke-width="5" stroke-linejoin="round" d="M118 200 c-16 0 -28 -12 -28 -28 v-40 c0 -8 6 -14 12 -14 s12 6 12 14 v20 h6 v-58 c0 -8 5 -14 12 -14 s12 6 12 14 v50 h6 v-66 c0 -8 5 -14 12 -14 s12 6 12 14 v66 h6 v-56 c0 -8 5 -14 12 -14 s12 6 12 14 v62 h6 v-30 c0 -8 5 -14 12 -14 s12 6 12 14 v50 c0 24 -18 44 -44 44 z"/>
+      <path d="M100 176 h100" stroke="#9B2D4A" stroke-width="5" stroke-dasharray="6 6"/>
+      <text x="150" y="282" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="34" fill="#2F4F3A">One Glove</text>
+    </svg>
+  </div>
+  <div class="body">
+    <h2 style="font-family:'Fredoka',sans-serif;font-weight:700">Knit Together</h2>
+    <p class="thesis">Wool, embroidery, a badge you could sew on a toque. Cozy Nordic-meets-Canadian, built for ski towns and cold cities. The brand feels like the thing it's looking for.</p>
+    <p class="line" style="font-family:'Fredoka',sans-serif;font-weight:700;color:#9B2D4A">Lost, found, knit back together.</p>
+    <div class="sw"><i style="background:#D9A21B"></i><i style="background:#9B2D4A"></i><i style="background:#EFE7D6"></i><i style="background:#2F4F3A"></i><i style="background:#2A2724"></i></div>
+    <dl class="meta"><dt>Type</dt><dd>Fredoka (rounded, chunky) with Nunito body</dd><dt>Voice</dt><dd>Cosy and practical. Reunion cards look like a patch you earned.</dd><dt>Icon</dt><dd>Gold badge with stitched glove; works as a physical pin and a sticker.</dd><dt>Risk</dt><dd>Very winter. Southern-hemisphere summer users may feel it's not for them.</dd></dl>
+    </div>
+</article>
+
+<!-- 4 GOOD VIBRATIONS -->
+<article class="opt" data-id="vibes">
+  <div class="hero" style="background:#111111;color:#FFF7E6">
+    <span class="tag">Direction 04</span>
+    <svg viewBox="0 0 300 300" role="img" aria-label="Waving glove sending out coloured rings">
+      <g fill="none" stroke-width="10" stroke-linecap="round">
+        <path d="M60 150 a90 90 0 0 1 180 0" stroke="#E23A2E"/>
+        <path d="M84 150 a66 66 0 0 1 132 0" stroke="#FFC42E"/>
+        <path d="M108 150 a42 42 0 0 1 84 0" stroke="#1EA45A"/>
+      </g>
+      <path fill="#FFF7E6" d="M124 232 c-14 0 -24 -10 -24 -24 v-30 c0 -6 4 -10 9 -10 s9 4 9 10 v14 h4 v-44 c0 -6 4 -10 9 -10 s9 4 9 10 v38 h4 v-50 c0 -6 4 -10 9 -10 s9 4 9 10 v50 h4 v-42 c0 -6 4 -10 9 -10 s9 4 9 10 v48 h4 v-24 c0 -6 4 -10 9 -10 s9 4 9 10 v40 c0 18 -14 34 -34 34 z"/>
+      <text x="150" y="284" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="46" letter-spacing="4" fill="#FFC42E">ONE GLOVE</text>
+    </svg>
+  </div>
+  <div class="body">
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.04em;font-size:38px">Good Vibrations</h2>
+    <p class="thesis">A glove waving hello, sending out rings of colour like a radio signal. Black ground makes the three colours sing. Street-poster energy, built for stickers, tees and a 9:16 story.</p>
+    <p class="line" style="font-family:'Bebas Neue',sans-serif;letter-spacing:.06em;color:#FFC42E;font-size:30px">Wave. Find. Reunite.</p>
+    <div class="sw"><i style="background:#111111"></i><i style="background:#FFC42E"></i><i style="background:#E23A2E"></i><i style="background:#1EA45A"></i><i style="background:#FFF7E6"></i></div>
+    <dl class="meta"><dt>Type</dt><dd>Bebas Neue display, Work Sans for body and UI</dd><dt>Voice</dt><dd>Short, rhythmic, upbeat. Three-word sentences. Big on sound and motion in-app.</dd><dt>Icon</dt><dd>Cream glove on black with the three rings; the most distinctive on a home screen.</dd><dt>Risk</dt><dd>Dark UI by default; the three-stripe palette must stay abstract, never costume.</dd></dl>
+    </div>
+</article>
+
+<!-- 5 WARM BUREAU -->
+<article class="opt" data-id="bureau">
+  <div class="hero" style="background:#C9A472;color:#2A2118">
+    <span class="tag">Direction 05</span>
+    <svg viewBox="0 0 300 300" role="img" aria-label="Kraft case file with a reunited stamp">
+      <rect x="50" y="50" width="200" height="210" fill="#F6ECD8" transform="rotate(-3 150 155)"/>
+      <rect x="62" y="70" width="176" height="120" fill="#E9DCC2" transform="rotate(-3 150 155)"/>
+      <path fill="#2A2118" d="M132 176 c-12 0 -20 -8 -20 -20 v-26 c0 -5 3 -8 7 -8 s7 3 7 8 v12 h4 v-38 c0 -5 3 -8 7 -8 s7 3 7 8 v33 h4 v-42 c0 -5 3 -8 7 -8 s7 3 7 8 v42 h4 v-36 c0 -5 3 -8 7 -8 s7 3 7 8 v42 h4 v-20 c0 -5 3 -8 7 -8 s7 3 7 8 v34 c0 15 -12 28 -28 28 z" transform="rotate(-3 150 155)"/>
+      <g transform="rotate(-12 150 215)"><rect x="70" y="196" width="160" height="40" fill="none" stroke="#D64530" stroke-width="5"/><text x="150" y="226" text-anchor="middle" font-family="'Special Elite', monospace" font-size="26" fill="#D64530">REUNITED</text></g>
+      <rect x="110" y="40" width="80" height="18" fill="#FFD166" opacity=".9" transform="rotate(2 150 49)"/>
+      <text x="150" y="286" text-anchor="middle" font-family="'Special Elite', monospace" font-size="26" fill="#2A2118">ONE GLOVE</text>
+    </svg>
+  </div>
+  <div class="body">
+    <h2 style="font-family:'Special Elite',monospace;font-weight:400">Warm Bureau</h2>
+    <p class="thesis">The case-file idea from the brief, with the heat turned up: kraft paper, sunflower tape, a red REUNITED stamp. Keeps the deadpan humour for the posters, saves the warmth for the moment it matters.</p>
+    <p class="line" style="font-family:'Special Elite',monospace;color:#D64530">Case closed. Hearts open.</p>
+    <div class="sw"><i style="background:#C9A472"></i><i style="background:#FFD166"></i><i style="background:#D64530"></i><i style="background:#F6ECD8"></i><i style="background:#2A2118"></i></div>
+    <dl class="meta"><dt>Type</dt><dd>Special Elite (typewriter) for headlines and stamps, Nunito for UI</dd><dt>Voice</dt><dd>Deadpan bureau on the poster, sincere on the reunion card. Both jokes land.</dd><dt>Icon</dt><dd>Kraft folder with the stamp; feels like a real object.</dd><dt>Risk</dt><dd>Least "One Love." Warm through props, not colour. The middle path may satisfy no one.</dd></dl>
+    </div>
+</article>
+
+</section>
+
+
+</div>
+
+
+
+</body></html>
